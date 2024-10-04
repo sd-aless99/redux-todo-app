@@ -1,0 +1,9 @@
+<footer class="footer">
+    <span class="todo-count"><strong>{{activeTodo}}</strong> active todos</span>
+    <ul class="filters">
+      <li (click)="changeFilter(filter)" *ngFor="let filter of filterArray">
+        <a href="#/" [class.selected]="filter === currentFilter">{{filter | titlecase}}</a>
+      </li>
+    </ul>
+    <button (click)="removeCompleted()" class="clear-completed">Clear completed</button>
+  </footer>
